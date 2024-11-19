@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ensure you are using a valid and compatible CodeMirror version -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="language-selector">
+                <select id="language">
+                    <option value="html">HTML</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="sql">SQL</option>
+                </select>
+            </div>
+            <h1>Generated Code</h1>
+        </div>
+        <div class="content">
+            <div class="input-section">
+                <p>To use this tool, take the following steps —</p>
+                <ol>
+                    <li>Select the programming language from the dropdown above</li>
+                    <li>Describe the code you want to generate here in this box</li>
+                    <li>Click Generate</li>
+                </ol>
+                <textarea id="description" placeholder="Enter your description here..."></textarea>
+            </div>
+            <div class="output-section">
+                <textarea id="generatedCode">The generated code will be displayed here</textarea>
+                <div class="output-buttons">
+                    <button onclick="copyCode()">📋</button>
+                    <button onclick="downloadCode()">⬇️</button>
+                </div>
+            </div>
+        </div>
+        <button id="mybutton" class="generate-button" onclick="generateCode()">Generate</button>
+
+        <!-- Live Preview Section -->
+        <div class="live-preview-section">
+            <h2>Live Preview</h2>
+            <iframe id="iframePreview" style="width: 100%; height: 500px; border: 1px solid #ccc;"></iframe>
+        </div>
+    </div>
+
+    <!-- Load CodeMirror JS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
