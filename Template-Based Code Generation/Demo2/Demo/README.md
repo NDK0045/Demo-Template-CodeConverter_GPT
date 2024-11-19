@@ -1,10 +1,4 @@
-gen code ra edit filed - done
-
-thêm ví dụ cho python - not yet
-
-button chuyển mode trational vs AI - bỏ
-
-them keyword for more flexible function - qiqi
+Run file index.html là đc
 
 Demo prompts:
 
